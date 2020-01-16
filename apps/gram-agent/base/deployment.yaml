@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dapi-test-pod
+spec:
+ selector:
+    matchLabels:
+      app: gram-agent
+ template:
+  metadata:
+   labels:
+     app: gram-agent
+  spec:
+   containers:
+    - name: nginx
+      image: nginx
+      envFrom:
+      - configMapRef:
+          name: special-config

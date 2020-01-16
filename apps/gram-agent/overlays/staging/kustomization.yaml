@@ -1,0 +1,7 @@
+bases:
+- ../../base
+namespace: eai-dev-gram-agent
+patchesStrategicMerge:
+- configmap.yaml
+- deployment.yaml
+
