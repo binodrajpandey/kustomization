@@ -32,3 +32,7 @@ brew install kustomize
 ```
 kubectl getkustomize build . | kubectl apply -f -
 ```
+## View diff
+```
+kustomize build /path/ | kubectl diff -n <namespace> -f - 
+```
